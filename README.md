@@ -1,6 +1,7 @@
-# Walmart-Sales-Data-Analysis
+![image](https://github.com/user-attachments/assets/a21d0d1c-a502-4e46-8b6a-b13c3788b43f)# Walmart-Sales-Data-Analysis
 <br>
-SQL Project
+SQL Project:
+<br>
 <br>
 🔍 Walmart Q1 Sales Analysis (Jan-Mar) 2019
 <br>
