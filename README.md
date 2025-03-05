@@ -1,5 +1,7 @@
 # Walmart-Sales-Data-Analysis
 <br>
+SQL Project
+<br>
 🔍 Walmart Q1 Sales Analysis (Jan-Mar) 2019
 <br>
 Analyzed Walmart's Q1 sales data of using MySQL.
