@@ -1,90 +1,132 @@
 # Walmart-Sales-Data-Analysis
-About
-We are analysing Walmart's sales data to identify high-performing branches and products, analyze the sales patterns of various products, and understand customer behavior. The primary objective is to enhance and optimize sales strategies. The dataset utilized in this project is sourced from the Kaggle Walmart Sales Forecasting Competition.
+<br>
+🔍 Walmart Q1 Sales Analysis (Jan-Mar) 2019
+<br>
+Analyzed Walmart's Q1 sales data of using MySQL.
+<br>
+<br>
+The dataset contains detailed records of purchases made at Walmart stores across three branches in Myanmar:
+<br>
+📍 Branch A – Yangon
+<br>
+📍 Branch B – Mandalay
+<br>
+📍 Branch C – Naypyitaw
+<br>
+<br>
+Here’s what I found:
+<br>
+📊 Business Overview:
+<br>
+✅ Total Transactions: 995
+<br>
+✅ Total Quantity Sold: 5,472
+<br>
+✅ Average Order Value: $322.50
+<br>
+✅ Total Revenue: $320,886.39
+<br>
+✅ Total Profit: $15,280.30
+<br>
+✅ Profit Margin: 4.76%
+<br>
+<br>
+👥 Customer & Payment Insights:
+<br>
+✅ Top Customer Type: Members (50.99% of revenue, $163,625.10)
+<br>
+✅ Most Preferred Payment Methods:
+ <br>
+ Cash: 34.57%
+ <br>
+ E-Wallet: 34.37%
+ <br>
+ Credit Card: 31.06%
+ <br>
+ <br>
 
-Purposes of the Project
-The main goal of this project is to gain understanding from Walmart's sales data, exploring the various factors that influence sales across different branches.
+🛒 Product Performance:
+<br>
+✅ Top-Selling Product Line: Food & Beverages (17.50% of revenue, $56,144.84)
+<br>
+✅ Most Profitable Product Line: Food & Beverages (17.50% of profit, $2,673.56)
+<br>
+✅ Underperforming Product Lines (Avg Sale < $322.50):
+ <br>
+ Fashion Accessories: $305.09
+ <br>
+ Electronic Accessories: $318.24
+<br>
+<br>
+📅 Peak Sales Trends:
+<br>
+✅ Highest Revenue Month: January (36.24%)
+<br>
+✅ Peak Sales Day: Saturday (17.49%)
+<br>
+✅ Peak Sales Time: Evening (42.81%)
+<br>
+<br>
+🏢 Branch-Wise Performance
+<br>
+✅ Revenue Share by Branch:
+<br>
+ Branch C: 34.43%
+ <br>
+ Branch A: 32.99%
+ <br>
+ Branch B: 32.58%
+ <br>
+ <br>
+✅ Branches Selling Above Avg Quantity (5.49 per transaction):
+<br>
+Branch C: 5.59
+<br>
+<br>
+💳 Payment Method Breakdown:
+<br>
+✅ Cash: 34.57%
+<br>
+✅ E-Wallet: 34.37%
+<br>
+✅ Credit Card: 31.06%
+<br>
+<br>
 
-About Data
-This project's data was obtained from the Kaggle Walmart Sales Forecasting Competition and it encompasses sales transactions from three Walmart branches situated in Mandalay, Yangon, and Naypyitaw, respectively. The data contains 17 columns and 1000 rows:
+🛒 Gender-Based Product Preferences:
+<br>
+✅ Male: Health & Beauty (88 qty), Electronic Accessories (86 qty), Food & Beverages (84 qty)
+<br>
+✅ Female: Fashion Accessories (96 qty), Food & Beverages (90 qty), Sports & Travel (86 qty)
+<br>
+<br>
 
-Column	Description	Data Type
-invoice_id	Invoice of the sales made	VARCHAR(30)
-branch	Branch at which sales were made	VARCHAR(5)
-city	The location of the branch	VARCHAR(30)
-customer_type	The type of the customer	VARCHAR(30)
-gender	Gender of the customer making purchase	VARCHAR(10)
-product_line	Product line of the product sold	VARCHAR(100)
-unit_price	The price of each product	DECIMAL(10, 2)
-quantity	The amount of the product sold	INT
-VAT	The amount of tax on the purchase	FLOAT(6, 4)
-total	The total cost of the purchase	DECIMAL(12, 4)
-date	The date on which the purchase was made	DATETIME
-time	The time at which the purchase was made	TIME
-payment	The total amount paid	DECIMAL(10, 2)
-cogs	Cost Of Goods sold	DECIMAL(10, 2)
-gross_margin_pct	Gross margin percentage	FLOAT(11, 9)
-gross_income	Gross Income	DECIMAL(12, 4)
-rating	Rating	FLOAT(2, 1)
-Analysis List:
-Product Analysis
-Perform an analysis on the data to gain insights into different product lines, determine the top-performing product lines, and identify areas for improvement in other product lines.
+🌟 Customer Satisfaction & Ratings:
+<br>
+✅ Highest Rated Product Line: Food & Beverages (7.11 avg rating)
+<br>
+✅ Best Day for Ratings: Monday (7.31 avg rating)
+<br>
+✅ Best Branch-Day Combinations:
+<br>
+ Branch A: Friday (7.31 avg rating)
+ <br>
+ Branch B: Monday (7.27 avg rating)
+ <br>
+ Branch C: Saturday (7.23 avg rating)
+ <br>
+ <br>
 
-Sales Analysis
-The objective of this analysis is to address the inquiry regarding the sales trends of the product. The outcomes of this analysis can assist in evaluating the efficiency of each applied sales strategy in the business and determining necessary modifications to increase sales.
-
-Customer Analysis
-This analysis is focused on identifying various customer segments, understanding purchasing trends, and evaluating the profitability associated with each of these customer segments.
-
-Approach Used
-1. Data Wrangling
-
-During this initial phase, the data is examined to detect any NULL or missing values, and strategies for data replacement are implemented to address and substitute these values effectively.
-
-Build a database
-Create a table and insert the data.
-Select columns with null values in them. Null values are not present in our database because, in creating the tables, NOT NULL was specified for each field, effectively filtering out any null values.
-2. Feature Engineering
-
-This will help use generate some new columns from existing ones.
-
-Add a new column named time_of_day to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are made.
-Add a new column named day_name that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
-Add a new column named month_name that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
-3. Exploratory Data Analysis (EDA)
-
-Conducting exploratory data analysis is essential to address the project's listed questions and objectives.
-
-Business Questions to Answer
-Generic Questions
-How many distinct cities are present in the dataset?
-In which city is each branch situated?
-Product Analysis
-How many distinct product lines are there in the dataset?
-What is the most common payment method?
-What is the most selling product line?
-What is the total revenue by month?
-Which month recorded the highest Cost of Goods Sold (COGS)?
-Which product line generated the highest revenue?
-Which city has the highest revenue?
-Which product line incurred the highest VAT?
-Retrieve each product line and add a column product_category, indicating 'Good' or 'Bad,' based on whether its sales are above the average.
-Which branch sold more products than average product sold?
-What is the most common product line by gender?
-What is the average rating of each product line?
-Sales Analysis
-Number of sales made in each time of the day per weekday
-Identify the customer type that generates the highest revenue.
-Which city has the largest tax percent/ VAT (Value Added Tax)?
-Which customer type pays the most VAT?
-Customer Analysis
-How many unique customer types does the data have?
-How many unique payment methods does the data have?
-Which is the most common customer type?
-Which customer type buys the most?
-What is the gender of most of the customers?
-What is the gender distribution per branch?
-Which time of the day do customers give most ratings?
-Which time of the day do customers give most ratings per branch?
-Which day of the week has the best avg ratings?
-Which day of the week has the best average ratings per branch?
+📢 Key Takeaways & Insights:
+<br>
+🔹 Food & Beverages dominate in both revenue & profit, making them a key focus area.
+<br>
+🔹 Saturdays & evenings drive maximum sales, ideal for promotions.
+<br>
+🔹 Digital payments (E-Wallet & Credit Card) are nearly two-thirds of transactions, highlighting the need for seamless payment options.
+<br>
+🔹 Fashion & Electronic Accessories underperform and need targeted strategies to boost sales.
+<br>
+🔹 Branch C outperforms in both revenue & quantity sold, making it an ideal location for further expansion.
+<br>
+🔹 Monday has the lowest revenue (4.88%), indicating potential for exclusive deals to boost sales. 
